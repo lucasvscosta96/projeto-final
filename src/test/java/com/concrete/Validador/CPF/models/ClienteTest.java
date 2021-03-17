@@ -12,6 +12,7 @@ public class ClienteTest{
 
 	@Test
 	void testandoInstanciaDeCliente() {
+
         Cliente cli = new Cliente();
         cli.setNome("Luis");
         assertEquals(cli.getNome(), "Luis");
