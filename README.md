@@ -16,3 +16,12 @@ docker start validador-cpf-java
 
 ### para remover o serviço rodar ###
 docker rm validador-cpf-java
+
+### Para se logar no dockerhub ###
+docker login
+
+### Criar a tag apontando para o repositorio do docker hub ###
+docker tag eduardotech/validador-cpf-java + URL Docker
+
+### Fazer push da imagem para o docker hub ###
+docker push eduardotech/validador-cpf-java
