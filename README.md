@@ -1,12 +1,12 @@
 
 ### Gerar o build do docker ###
-./mvnw.cmd package && java -jar target/validarCpf.jar
+./mvnw. package && java -jar target/validarCpf.jar
 
 ### Gerar o build do docker ###
 docker build -t eduardotech/validador-cpf-java -f Dockerfile .
 
 ### Rodar imagem docker e gravar localmente ###
-docker run -d -p 8081:8081 --name validador-cpf-java eduardotech/validador-cpf-java
+docker run -d -p 8081:8081 --name validador-cpf-java eduardotech/validador-cpf-java:1.0.0
 
 ### para parar o serviço rodar ###
 docker stop validador-cpf-java
