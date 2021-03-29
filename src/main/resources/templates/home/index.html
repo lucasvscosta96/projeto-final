@@ -1,37 +1,226 @@
 <!DOCTYPE html>
 <html>
+<title>Concrete DevOps</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif
+  }
 
-<head>
-  <title>Sistema para validar CPF em java</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
+  body,
+  html {
+    height: 100%;
+    line-height: 1.8;
+  }
 
-<body class="container">
-  <br><br>
-  <h2>Validador de CPF</h2>
+  /* Full height image header */
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://miro.medium.com/max/5600/1*ONgF2qVs0sXVC542ckdf8Q.png");
+    min-height: 100%;
+  }
 
-  <form action="/valida-cpf" method="post">
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+</style>
 
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" for="nome">Nome</span>
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-container w3-deep-purple" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">CONCRETE DEVOPS</a>
+
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">SOBRE</a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> EQUIPE</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTATO</a>
+        <a href="#validate" class="w3-bar-item w3-button"><i class="fa fa-validate"></i> VALIDADOR CPF</a>
       </div>
-      <input type="text" class="form-control" id="nome" name="nome" aria-describedby="basic-addon3">
-    </div>
 
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" for="cpf">CPF</span>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+    style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">SOBRE</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">EQUIPE</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
+    <a href="#validate" onclick="w3_close()" class="w3-bar-item w3-button">CONTATO</a>
+  </nav>
+
+  <!-- Header with full-height image -->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+      <span class="w3-jumbo w3-hide-small">Entrega de software automatizada</span><br>
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Entrega de software automatizada</span><br>
+      <span class="w3-large">Projeto em MVC {Model View Controller}</span>
+      <p><a href="#about"
+          class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Leia
+          Mais</a></p>
+    </div>
+    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-container" style="padding:128px 16px" id="about">
+    <h2 class="w3-center"><b>Sobre a Concrete</b></h2>
+    <p class="w3-center w3-large">Nós desenvolvemos produtos digitais com inovação, agilidade e excelentes práticas,
+      para que o mercado brasileiro e latino-americano acompanhe a velocidade do mercado digital mundial. Acreditamos
+      que as transformações que mantêm o mundo em constante movimento passam por nossas mãos — e gostamos disso.</p>
+    <br>
+    <h2 class="w3-center"><b>O que é DevOps?</b></h2>
+    <p class="w3-center w3-large">Atualmente, DevOps tem sido sinônimo para cargos e ferramentas, mas na verdade é muito
+      mais que isso.
+      O conceito DevOps surge a partir da necessidade de gerar valor, eliminando processos manuais e unindo os times em
+      prol de um bem maior.
+      Além disso, o termo está relacionado à garantia de qualidade, monitoramento, rastreabilidade e alta
+      disponibilidade na hora de gerar as entregas.</p>
+    <br>
+    <h2 class="w3-center"><b>O que é MVC</b></h2>
+    <p class="w3-center w3-large">Model – view – controller (MVC) é um padrão de arquitetura de software para
+      implementar interfaces de usuário.
+      Ele divide um determinado aplicativo de software em três partes interconectadas , de modo a separar as
+      representações internas das
+      informações das formas como as informações são apresentadas ou aceitas pelo usuário.</p>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Team Section -->
+    <div class="w3-container" style="padding:128px 16px" id="team">
+      <h3 class="w3-center">A EQUIPE</h3>
+      <p class="w3-center w3-large">Turma Concrete DevOps</p>
+      <div class="w3-row-padding w3-center w3-grayscale" style="margin-top:64px">
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="image/luiscosta.jpg" alt="Lucas" style="width:100%">
+            <div class="w3-container">
+              <h3>Luis Eduardo Santos Costa</h3>
+              <p class="w3-opacity">Application Development Analyst</p>
+              <p>Incluir o texto de apresentação</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="image/lucascosta.jpg" alt="Lucas" style="width:100%">
+            <div class="w3-container">
+              <h3>Lucas Vinicius de Souza Costa</h3>
+              <p class="w3-opacity">Application Development Analyst</p>
+              <p>Incluir o texto de apresentação</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l3 m6 w3-margin-bottom">
+          <div class="w3-card">
+            <img src="image/thiagogaleno.jpg" alt="Thiago" style="width:100%">
+            <div class="w3-container">
+              <h3>Thiago de Oliveira Galeno</h3>
+              <p class="w3-opacity">Application Development Analyst</p>
+              <p>Incluir o texto de apresentação</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+            </div>
+          </div>
+        </div>
       </div>
-      <input type="text" class="form-control" id="cpf" name="cpf" aria-describedby="basic-addon3">
-    </div>
+      <br>
 
-    <input type="submit" class="btn btn-success" value="Enviar">
-  </form>
 
-  <p>If you click the "Enviar" button, the form-data will be sent to a page called "/valida-cpf".</p>
+      <!-- Contact Section -->
+      <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+        <h3 class="w3-center">CONTATO</h3>
+        <p class="w3-center w3-large">Entre em Contato para saber mais:</p>
+        <div style="margin-top:48px">
+          <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Brasil, SP</p>
+          <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefone: +11 9 76453291</p>
+          <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: turmadevopsconcrete@mail.com</p>
+          <br>
+          <form action="/action_page.php" target="_blank">
+            <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name"></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Assunto" required name="Subject"></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Message"></p>
+            <p>
+              <button class="w3-button w3-black" type="submit">
+                <i class="fa fa-paper-plane"></i> ENVIAR
+              </button>
+            </p>
+          </form>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <!-- Validate CPF Section -->
+          <div class="w3-container w3-deep-purple" style="padding:128px 16px" id="validate">
+            <h3 class="w3-center">VALIDADOR DE CPF</h3>
+            <p class="w3-center w3-large">Faça sua validação de CPF aqui:</p>
+            <div style="margin-top:48px">
+              <form action="/valida-cpf" method="post">
+                <span class="input-group-text" for="nome">Nome</span>
+                <p><input class="w3-input w3-border" type="text" id="nome" name="nome" placeholder="Digite seu Nome">
+                </p>
+                <span class="input-group-text" for="cpf">CPF</span>
+                <p><input class="w3-input w3-border" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
+                </p>
+                <button class="w3-button w3-black" type="submit">
+                  <i class="fa fa-paper-plane"></i> ENVIAR
+                </button>
+                </p>
+              </form>
+            </div>
+          </div>
 
+          <br>
+
+          <!-- Footer -->
+          <footer class="w3-center w3-black w3-padding-64">
+            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Pagina
+              Inicial</a>
+            <div class="w3-xlarge w3-section">
+              <i class="fa fa-facebook-official w3-hover-opacity"></i>
+              <i class="fa fa-instagram w3-hover-opacity"></i>
+              <i class="fa fa-twitter w3-hover-opacity"></i>
+              <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-green">w3.css</a></p>
+          </footer>
 </body>
 
 </html>
