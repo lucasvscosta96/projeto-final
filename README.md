@@ -1,6 +1,6 @@
 
 ### Gerar o build do docker ###
-./mvnw. package && java -jar target/validarCpf.jar
+./mvnw package && java -jar target/validarCpf.jar
 
 ### Gerar o build do docker ###
 docker build -t eduardotech/validador-cpf-java -f Dockerfile .
