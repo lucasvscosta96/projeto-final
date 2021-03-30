@@ -14,6 +14,7 @@ public class HomeController {
        return "home/index";
     }
 
+
     @PostMapping("/valida-cpf")
     public String validarCpf(Cliente cliente, Model model) {
         model.addAttribute("cliente", cliente);
