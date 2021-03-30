@@ -112,115 +112,118 @@
 
 
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <!-- Team Section -->
     <div class="w3-container" style="padding:128px 16px" id="team">
-      <h3 class="w3-center">A EQUIPE</h3>
-      <p class="w3-center w3-large">Turma Concrete DevOps</p>
-      <div class="w3-row-padding w3-center w3-grayscale" style="margin-top:64px">
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-card">
+      <h2 class="w3-center">A EQUIPE</h2>
+      <h3 class="w3-center w3-large">Turma Concrete DevOps - Grupo D</h3>
+      <div class="w3-row-padding w3-grayscale" style="margin-top:64px" id="team">
+        <div class="w3-third">
+          <div class="w3-card w3-container w3-margin-bottom">
             <img src="image/luiscosta.jpg" alt="Lucas" style="width:100%">
-            <div class="w3-container">
+            <div class="w3-container w3-center">
               <h3>Luis Eduardo Santos Costa</h3>
               <p class="w3-opacity">Application Development Analyst</p>
-              <p>Incluir o texto de apresentação</p>
-              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+              <form action="/profile-luis" method="GET">
+                <p><button type="submit" class="w3-button w3-light-grey w3-block"><i class="fa fa-user"></i>
+                    Profile</button></p>
+              </form>
             </div>
           </div>
         </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-card">
+
+        <div class="w3-third">
+          <div class="w3-card w3-container w3-margin-bottom">
             <img src="image/lucascosta.jpg" alt="Lucas" style="width:100%">
-            <div class="w3-container">
+            <div class="w3-container w3-center">
               <h3>Lucas Vinicius de Souza Costa</h3>
               <p class="w3-opacity">Application Development Analyst</p>
-              <p>Incluir o texto de apresentação</p>
-              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+              <form action="/profile-lucas" method="GET">
+                <p><button type="submit" class="w3-button w3-light-grey w3-block"><i class="fa fa-user"></i>
+                    Profile</button></p>
+              </form>
             </div>
           </div>
         </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
-          <div class="w3-card">
+
+        <div class="w3-third">
+          <div class="w3-card w3-container w3-margin-bottom">
             <img src="image/thiagogaleno.jpg" alt="Thiago" style="width:100%">
-            <div class="w3-container">
+            <div class="w3-container w3-center">
               <h3>Thiago de Oliveira Galeno</h3>
               <p class="w3-opacity">Application Development Analyst</p>
-              <p>Incluir o texto de apresentação</p>
-              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+              <form action="/profile-thiago" method="GET">
+                <p><button type="submit" class="w3-button w3-light-grey w3-block"><i class="fa fa-user"></i>
+                    Profile</button></p>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <br>
+    </div>
+    <br>
 
 
-      <!-- Contact Section -->
-      <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-        <h3 class="w3-center">CONTATO</h3>
-        <p class="w3-center w3-large">Entre em Contato para saber mais:</p>
-        <div style="margin-top:48px">
-          <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Brasil, SP</p>
-          <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefone: +11 9 76453291</p>
-          <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: turmadevopsconcrete@mail.com</p>
-          <br>
-          <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name"></p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Assunto" required name="Subject"></p>
-            <p><input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Message"></p>
-            <p>
+    <!-- Contact Section -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+      <h3 class="w3-center">CONTATO</h3>
+      <p class="w3-center w3-large">Entre em Contato para saber mais:</p>
+      <div style="margin-top:48px">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Brasil, SP</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Telefone: +11 9 76453291</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: turmadevopsconcrete@mail.com</p>
+        <br>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Assunto" required name="Subject"></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Message"></p>
+          <p>
+            <button class="w3-button w3-black" type="submit">
+              <i class="fa fa-paper-plane"></i> ENVIAR
+            </button>
+          </p>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+        <!-- Validate CPF Section -->
+        <div class="w3-container w3-deep-purple" style="padding:128px 16px" id="validate">
+          <h3 class="w3-center">VALIDADOR DE CPF</h3>
+          <p class="w3-center w3-large">Faça sua validação de CPF aqui:</p>
+          <div style="margin-top:48px">
+            <form action="/valida-cpf" method="post">
+              <span class="input-group-text" for="nome">Nome</span>
+              <p><input class="w3-input w3-border" type="text" id="nome" name="nome" placeholder="Digite seu Nome">
+              </p>
+              <span class="input-group-text" for="cpf">CPF</span>
+              <p><input class="w3-input w3-border" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
+              </p>
               <button class="w3-button w3-black" type="submit">
                 <i class="fa fa-paper-plane"></i> ENVIAR
               </button>
-            </p>
-          </form>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <!-- Validate CPF Section -->
-          <div class="w3-container w3-deep-purple" style="padding:128px 16px" id="validate">
-            <h3 class="w3-center">VALIDADOR DE CPF</h3>
-            <p class="w3-center w3-large">Faça sua validação de CPF aqui:</p>
-            <div style="margin-top:48px">
-              <form action="/valida-cpf" method="post">
-                <span class="input-group-text" for="nome">Nome</span>
-                <p><input class="w3-input w3-border" type="text" id="nome" name="nome" placeholder="Digite seu Nome">
-                </p>
-                <span class="input-group-text" for="cpf">CPF</span>
-                <p><input class="w3-input w3-border" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF">
-                </p>
-                <button class="w3-button w3-black" type="submit">
-                  <i class="fa fa-paper-plane"></i> ENVIAR
-                </button>
-                </p>
-              </form>
-            </div>
+              </p>
+            </form>
           </div>
+        </div>
 
-          <br>
+        <br>
 
-          <!-- Footer -->
-          <footer class="w3-center w3-black w3-padding-64">
-            <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Pagina
-              Inicial</a>
-            <div class="w3-xlarge w3-section">
-              <i class="fa fa-facebook-official w3-hover-opacity"></i>
-              <i class="fa fa-instagram w3-hover-opacity"></i>
-              <i class="fa fa-twitter w3-hover-opacity"></i>
-              <i class="fa fa-linkedin w3-hover-opacity"></i>
-            </div>
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-                class="w3-hover-text-green">w3.css</a></p>
-          </footer>
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64">
+          <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Pagina
+            Inicial</a>
+          <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+          </div>
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+              class="w3-hover-text-green">w3.css</a></p>
+        </footer>
 </body>
 
 </html>

@@ -14,6 +14,21 @@ public class HomeController {
        return "home/index";
     }
 
+    @GetMapping("/profile-luis")
+    public String profile_luis() {
+       return "home/profile-luis";
+    }
+
+    @GetMapping("/profile-lucas")
+    public String profile_lucas() {
+       return "home/profile-lucas";
+    }
+
+    @GetMapping("/profile-thiago")
+    public String profile_thiago() {
+       return "home/profile-thiago";
+    }
+ 
     @PostMapping("/valida-cpf")
     public String validarCpf(Cliente cliente, Model model) {
         model.addAttribute("cliente", cliente);
