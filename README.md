@@ -16,3 +16,4 @@ docker tag lucasvscosta/{environment}-projeto-final + URL Docker
 
 ### Fazer push da imagem para o docker hub ###
 docker push lucasvscosta/{environment}-projeto-final
+
